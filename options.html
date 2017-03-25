@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
+	<link rel = "shortcut icon" href = "images/nope_icon_16.png">
+	<title>NOPE(No Phishing Extension) - 옵션설정 페이지</title>
+	<link rel = "stylesheet" type = "text/css" href = "css/options_page.css" />
+
+</head>
+<body>
+	<table>
+		<tr>
+			<td style = "padding-right: 8px; vertical-align: middle;">
+				<img src = "images/nope_icon_96.png">
+			</td>
+			<td>
+				<h1><span id = "options_title">NOPE 옵션설정</span></h1>
+			</td>
+		</tr>
+	</table>
+
+
+		<div id = "tab">
+
+		<div id = "tab_options">
+		
+			<p>
+				<span id = "refresh_title">NOPE은 네이버 피싱을 예방하기 위한 웨일 확장 프로그램입니다. 
+				네이버 사이트 방문 시 사용자가 설정한 색상의 테두리나 그림이 화면에 나타나며 네이버에서 제공하는 사이트가 아닌 경우에는 나타나지 않습니다. </span>
+			</p>
+			
+		<br>
+			
+			<p style = "margin-top: 2.5em;">
+
+				<p>
+				<span id = "switches_title">- NOPE 활성화</span>
+			</p>
+			
+			
+			
+			<p>
+			<label class = "switch">
+				<input type = "checkbox" class = "switch_input" id = "mwd_switch" checked>
+				<span class = "switch_label" data-on = "On" data-off = "Off"></span>
+				<span class = "switch_handle"></span>
+			</label><span id = "mwd_switch_title"></span>
+			</p>
+			
+<!--			<p>
+			<label class = "switch">
+				<input type = "checkbox" class="switch_input" id = "spd_switch" checked>
+				<span class = "switch_label" data-on = "On" data-off = "Off"></span>
+				<span class = "switch_handle"></span>
+			</label><span id = "spd_switch_title">컬러 옵션</span>
+			</p>
+-->
+		
+
+			
+        <div class="message" data-role="color-mode-title">- 테두리 컬러 설정</div>
+            <div class="field">
+                <input type="radio" name="color-mode" value="0" id="color-mode-0" /><label for="color-mode-0" data-role="color-mode-0" style="color:green">녹색</label><br/>
+                <input type="radio" name="color-mode" value="1" id="color-mode-1"/><label for="color-mode-1" data-role="color-mode-1" style="color:blue">파란색</label><br/>
+                <input type="radio" name="color-mode" value="2" id="color-mode-2"/><label for="color-mode-2" data-role="color-mode-2" style="color:black">검은색</label><br/>
+                <input type="radio" name="color-mode" value="3" id="color-mode-3"/><label for="color-mode-3" data-role="color-mode-3" style="color:red">빨간색</label><br/><br/>				
+            </div>
+
+			
+		</div>
+		
+
+	    <script src="js/options.js"></script>
+
+	
+</body>
+</html>

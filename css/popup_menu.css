@@ -1,0 +1,76 @@
+
+/*----------------------------------------------------*/
+html {border: 5px solid #4fb845;}
+body {
+	min-width: 254px;
+	margin: 0px;
+	font-family: Segoe UI, Arial, sans-serif;
+	font-size: 13px;
+	color: #545454;
+	background-color: #ffffff;
+	height: 325px
+}
+
+header {
+	height: 45px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #e1ddd8;
+}
+
+header #logo {
+  display: block;
+  position: relative;
+  top: 10px;
+  margin: 0px auto;
+}
+
+/*----------------------------------------------------*/
+
+#title {
+	padding: 5px 20px 10px; 
+   
+	color: rgba(93, 93, 93, 0.9); 
+	font-family: "Helvetica Neue", Arial, sans-serif; 
+	font-size: 23px; 
+	line-height: 24px; 
+	font-weight: bold;  
+	text-align: center; 
+	text-justify: inter-word;
+}
+
+#description {
+	padding: 5px 27px 10px;
+	width: 210px;
+	
+	color: black;
+	font-family: "Helvetica Neue", Arial, sans-serif; 
+	font-size: 12px; 
+	//line-height: 12px;
+	
+	//word-wrap: break-word;
+	//text-align: justify;
+}
+
+/*----------------------------------------------------*/
+
+footer {
+	cursor: pointer;
+	padding: 10px 35px;
+	border-top: 1px solid #e1ddd8;
+}
+
+footer .icon
+{
+  background-position: -50px -65px;
+  
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  vertical-align: top;
+  background-image: url(../images/popup_menu/icons_set.png);
+}
+
+
+
+

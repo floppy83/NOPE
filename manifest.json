@@ -1,0 +1,32 @@
+/**
+ * Created by heogyu on 2017. 3. 17..
+ */
+
+{
+  "background": {
+    "page":"background.html",
+    "persistent": true
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "js": [ "js/nophishing.js" ],
+    "match_about_blank": true,
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_start"
+  }],
+
+  "manifest_version": 2,
+
+  "name": "NOPE FOR NAVER",
+  "description": "NO Phishing Ext. Project.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "images/nope_icon_16.png",
+    "default_popup": "popup.html",
+    "default_title": "NOTE FOR NAVER"
+  },
+  "web_accessible_resources": ["js/edge_style.js"] ,
+  "options_page":"options.html",
+  "permissions": [ "activeTab", "tabs", "<all_urls>","http://*/*", "https://*/*", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "storage", "unlimitedStorage", "notifications" ]
+}

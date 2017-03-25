@@ -1,0 +1,215 @@
+
+/*----------------------------------------------------*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	padding: 20px;
+}
+td {
+	font-size: 15px;
+	vertical-align: top;
+	text-align: left;
+}
+p {
+	margin-top: 0.5em;
+}
+
+/*----------------------------------------------------*/
+
+#tab {
+	width: 100%;
+    height: 100%;
+	
+    border-radius: 25px;
+    border: 2px solid #797A7B;
+    
+	margin-top: 10px; 
+}
+
+#tab_options {
+	padding: 20px;
+}
+
+/*----------------------------------------------------*/
+
+#refresh_button {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color: #ededed;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 2px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: rgba(0,0,0,.75);
+	font-family: Arial;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 8px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+	//padding-left: 40px;
+}
+#refresh_button:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background: -moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color: #dfdfdf;
+}
+#refresh_button:active {
+	position: relative;
+	top: 1px;
+}
+#refresh_button #refresh_icon {
+	position: relative;
+	top: 2px;
+	left: -5px;
+}
+
+/*----------------------------------------------------*/
+
+.switch {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 56px;
+	height: 20px;
+	padding: 3px;
+	background-color: white;
+	border-radius: 18px;
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	background-image: -webkit-linear-gradient(top, #eeeeee, white 25px);
+	background-image: -moz-linear-gradient(top, #eeeeee, white 25px);
+	background-image: -o-linear-gradient(top, #eeeeee, white 25px);
+	background-image: linear-gradient(to bottom, #eeeeee, white 25px);
+}
+.switch .switch_input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.switch .switch_label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 15px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	-webkit-transition: 0.15s ease-out;
+	-moz-transition: 0.15s ease-out;
+	-o-transition: 0.15s ease-out;
+	transition: 0.15s ease-out;
+	-webkit-transition-property: opacity background;
+	-moz-transition-property: opacity background;
+	-o-transition-property: opacity background;
+	transition-property: opacity background;
+}
+.switch .switch_label:before, .switch_label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+}
+.switch .switch_label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch .switch_label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch .switch_input:checked ~ .switch_label {
+	background: #47a8d8;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch .switch_input:checked ~ .switch_label:before {
+	opacity: 0;
+}
+.switch .switch_input:checked ~ .switch_label:after {
+	opacity: 1;
+}
+.switch .switch_handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 18px;
+	height: 18px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+	background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+	-webkit-transition: left 0.15s ease-out;
+	-moz-transition: left 0.15s ease-out;
+	-o-transition: left 0.15s ease-out;
+	transition: left 0.15s ease-out;
+}
+.switch .switch_handle:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: #f9f9f9;
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+	background-image: -webkit-linear-gradient(top, #eeeeee, white);
+	background-image: -moz-linear-gradient(top, #eeeeee, white);
+	background-image: -o-linear-gradient(top, #eeeeee, white);
+	background-image: linear-gradient(to bottom, #eeeeee, white);
+}
+.switch .switch_input:checked ~ .switch_handle {
+	left: 40px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch > .switch_input:checked ~ .switch_label {
+	background: #4fb845;
+}
+
+/*----------------------------------------------------*/
+
+#mwd_switch_title, #spd_switch_title{
+	color: rgba(0,0,0,.75);
+	font-family: Arial;
+	font-size: 17px;
+	font-weight: bold;
+	
+	/*
+	position: relative; */
+	position: relative;
+	top: 3px;
+	left: 3px;
+}
+
+/*----------------------------------------------------*/
